@@ -1204,3 +1204,63 @@ h2 {
     font-size: 12px;
   }
 }
+
+
+/* =========================
+   MELHORIAS VISUAIS - BRANCH 1
+   ========================= */
+
+/* Efeitos no menu */
+.menu a {
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    background: var(--verde);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px #00000020;
+}
+
+/* Melhor destaque nos cards */
+.card,
+.servico-item {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.card:hover,
+.servico-item:hover {
+    transform: translateY(-6px);
+    border-color: var(--verde);
+    box-shadow: 0 14px 28px #173b5d18;
+}
+
+/* Animação nas imagens */
+.bannersite img {
+    transition: transform 0.4s ease;
+}
+
+.bannersite img:hover {
+    transform: scale(1.04);
+}
+
+/* Destaque ao navegar pelo teclado */
+.menu a:focus-visible,
+.botao:focus-visible,
+.card a:focus-visible,
+.servico-item a:focus-visible {
+    outline: 3px solid var(--laranja);
+    outline-offset: 4px;
+}
+
+/* Evita animações para quem prefere movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
