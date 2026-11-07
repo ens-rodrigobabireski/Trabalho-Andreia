@@ -1264,3 +1264,40 @@ h2 {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* =========================
+   MELHORIAS RESPONSIVIDADE - BRANCH 2
+   ========================= */
+
+/* Melhorias visuais na seção FAQ */
+
+details {
+    background-color: #ffffff;
+    border: 1px solid #e4eaf1;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+details:hover {
+    border-color: #1d9a70;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+summary {
+    color: #123d72;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 5px;
+}
+
+details[open] summary {
+    color: #1d9a70;
+    margin-bottom: 12px;
+}
+
+details p {
+    color: #657286;
+    line-height: 1.7;
+}
